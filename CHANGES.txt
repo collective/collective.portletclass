@@ -4,7 +4,7 @@ Changelog
 1.1 - Unreleased
 ----------------
 
-- Make the product Plone 5 compatible
+- Make the product Plone 5 / Python 3 compatible
   [frapell]
 
 

@@ -3,10 +3,11 @@ import zope.event
 from plone.portlets.interfaces import IPortletAssignment
 from z3c.form.field import Fields
 from zope.component import adapts
-from zope.interface import implements
+from zope.interface import implementer
 from zope.lifecycleevent import ObjectCreatedEvent
 
-from .interfaces import ICollectivePortletClassLayer, ICollectivePortletClass
+from collective.portletclass.interfaces import ICollectivePortletClass
+from collective.portletclass.interfaces import ICollectivePortletClassLayer
 
 portletclass_field = ICollectivePortletClass['collective_portletclass']
 
@@ -31,10 +32,11 @@ def collective_portletclass_createAndAdd(self, data):
     zope.event.notify(ObjectCreatedEvent(ob))
     return self.add(ob)
 
+
+@implementer(ICollectivePortletClass)
 class CollectivePortletClass(object):
     """Adapter to provide default value"""
     adapts(IPortletAssignment)
-    implements(ICollectivePortletClass)
 
     def __init__(self, context):
         self.context = context
