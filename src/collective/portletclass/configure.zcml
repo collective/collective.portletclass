@@ -5,8 +5,6 @@
     xmlns:monkey="http://namespaces.plone.org/monkey"
     i18n_domain="collective.portletclass">
 
-    <includeDependencies package="." />
-
     <genericsetup:registerProfile
         name="default"
         title="collective.portletclass"
