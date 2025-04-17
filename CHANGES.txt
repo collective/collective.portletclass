@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.1 (unreleased)
+1.1 (2025-04-17)
 ----------------
 
 - Make the product Plone 5 / Python 3 compatible
